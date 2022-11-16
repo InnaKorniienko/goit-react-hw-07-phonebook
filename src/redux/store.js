@@ -1,5 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit';
-import contactsReducer from './contacts/contacts-slice';
+import contactsSlice from './contacts/contacts-slice';
 import filterReducer from './filter/filter-slice';
 import { combineReducers } from '@reduxjs/toolkit';
 import { 
@@ -21,7 +21,7 @@ const contactsPersistConfig = {
   blacklist: ['filter']
 }
 
-const reducer = combineReducers({ contacts: contactsReducer,
+const reducer = combineReducers({ contacts: contactsSlice,
 filter: filterReducer});
 
 const persistedContactsReducer = persistReducer(contactsPersistConfig, reducer);
