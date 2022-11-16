@@ -36,6 +36,6 @@ const elements = filteredContacts?.map(({ name, phone, id }) => {
     <span className={css.contactlist__button} onClick={() => onRemoveContact(id)}>Delete</span></li>
   })
   return (
-    <ul>{elements}</ul>
+    <ul className={css.contactItem}>{elements}</ul>
   )
 }
