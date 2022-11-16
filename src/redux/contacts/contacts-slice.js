@@ -30,6 +30,7 @@ const contactsSlice = createSlice({
         [addContact.fulfilled]: (store, {payload}) => {
             store.loading = false;
             store.items.push(payload);
+            console.log(payload);
             // store.items = [...store.items, payload]
         },
         [addContact.rejected]: (store, {payload}) => {

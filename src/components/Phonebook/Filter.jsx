@@ -2,7 +2,7 @@ import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import css from "./Phonebook.module.css";
 import { getFilter } from "redux/filter/filter-selectors";
-import {setFilter } from "redux/filter/filter-slice";
+import { setFilter } from "redux/filter/filter-slice";
 
 export default function Filter() {
   const dispatch = useDispatch();
